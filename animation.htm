@@ -1,0 +1,79 @@
+<!DOCTYPE html />
+<html>
+<head>
+    <title></title>
+    <style>
+	body {
+		margin: 0px;
+	}
+
+        #atat {
+	       width: 47px;
+	        height: 47px;
+	        position: relative;
+	        margin: 0;
+	        padding: 0;
+	                }
+
+        #skull {
+	        background: url("load-circle.png") left center no-repeat;
+		width: 47px;
+	        height: 47px;
+	position: absolute;
+	        top: 0;
+	        right: 0;
+	        	
+        }
+                
+	@-webkit-keyframes rotate-skull {
+		0% {
+			-webkit-animation-timing-function: linear;
+			-webkit-transform: rotate(0deg)
+		}
+		100% {
+			-webkit-animation-timing-function: linear;
+			-webkit-transform: rotate(360deg)
+		}	
+	} 
+       
+        @keyframes rotate-skull {
+            0% {
+	            transform: rotate(0deg)
+            }
+            25% {
+	            transform: rotate(15deg)
+            }
+            50% {
+	            transform: rotate(-5deg)
+            }
+            55% {
+	            transform: rotate(0deg)
+            }
+            75% {
+	            transform: rotate(-10deg)
+            }
+            100% {
+	            transform: rotate(0deg)
+            }
+        } 
+
+        #atat #skull 
+        {
+            -webkit-animation-name: rotate-skull;
+	        -webkit-animation-duration: 2s;
+	        -webkit-animation-iteration-count: infinite;
+	        -webkit-transform-origin: 23 50%; 
+            animation-name: rotate-skull;
+	        animation-duration: 5s;
+	        animation-iteration-count: infinite;
+	        transform-origin: 23 50%;	        
+        }
+    </style>
+</head>
+<body>
+    <div id="atat" href="/">
+        <div id="skull">
+        </div>
+    </div>
+</body>
+</html>
