@@ -366,7 +366,6 @@ function loadTPCISCONext(file) {
 	var lastLineIP10 = Console.innerHTML.substr(Console.innerHTML.length-31, 12);
 	var lastLineIP11 = Console.innerHTML.substr(Console.innerHTML.length-30, 12);
   var lastLineIP13 = Console.innerHTML.substr(Console.innerHTML.length-33, 12);
-  console.log(IP+' : '+lastLineIP10+' '+lastLineIP11+' '+lastLineIP13);
   if (lastLineIP10 == "Trying&nbsp;" || lastLineIP11 == "Trying&nbsp;" || lastLineIP13 == "Trying&nbsp;")
 	return;
 	socket.emit('Commande', 'e');
