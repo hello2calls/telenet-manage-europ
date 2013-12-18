@@ -185,17 +185,16 @@ function saveCISCOOnly(IP, TP) {
 			break;
 	}
 
-	socket.emit('Commande', 'telnet '+IP+'\r');
-	setTimeout(function(){saveCISCOOnlyNext(IP, dir, hostname, minute, hour, day, month, year); parameter = null}, 1000);
+  socket.emit('Commande', 'telnet '+IP+'\r');
+  setTimeout(function(){saveCISCOOnlyNext(IP, dir, hostname, minute, hour, day, month, year); parameter = null}, 1000);
 }
 function saveCISCOOnlyNext(IP, dir, hostname, minute, hour, day, month, year) {
-	var Console = document.getElementById('console');
-	var lastLineIP10 = Console.innerHTML.substr(Console.innerHTML.length-31, 12);
-	var lastLineIP11 = Console.innerHTML.substr(Console.innerHTML.length-30, 12);
+  var Console = document.getElementById('console');
+  var lastLineIP10 = Console.innerHTML.substr(Console.innerHTML.length-31, 12);
+  var lastLineIP11 = Console.innerHTML.substr(Console.innerHTML.length-30, 12);
   var lastLineIP13 = Console.innerHTML.substr(Console.innerHTML.length-33, 12);
-  console.log(IP+' : '+lastLineIP10+' '+lastLineIP11+' '+lastLineIP13);
   if (lastLineIP10 == "Trying&nbsp;" || lastLineIP11 == "Trying&nbsp;" || lastLineIP13 == "Trying&nbsp;")
-	return;
+  return;
 	socket.emit('Commande', 'e');
 	socket.emit('Commande', 'u');
 	socket.emit('Commande', 'r');
@@ -217,19 +216,19 @@ function saveDSLAM(TP) {
   display(true);
 	year = date.getFullYear();
 	year = year.toString();
-	month = date.getMonth();
-	month = month+1;
-	month = month.toString();
-	if (month.length == 1) month = '0'+month;
-	day = date.getDate();
-	day = day.toString();
-	if (day.length == 1) day = '0'+day;
-	hour = date.getHours();
-	hour = hour.toString();
-	if (hour.length == 1) hour = '0'+hour;
-	minute = date.getMinutes();
-	minute = minute.toString();
-	if (minute.length == 1) minute = '0'+minute;
+  month = date.getMonth();
+  month = month+1;
+  month = month.toString();
+  if (month.length == 1) month = '0'+month;
+  day = date.getDate();
+  day = day.toString();
+  if (day.length == 1) day = '0'+day;
+  hour = date.getHours();
+  hour = hour.toString();
+  if (hour.length == 1) hour = '0'+hour;
+  minute = date.getMinutes();
+  minute = minute.toString();
+  if (minute.length == 1) minute = '0'+minute;
 
 	switch (TP) {
 		case true:
@@ -277,7 +276,6 @@ function resetCISCONext(IP) {
 	var lastLineIP10 = Console.innerHTML.substr(Console.innerHTML.length-31, 12);
 	var lastLineIP11 = Console.innerHTML.substr(Console.innerHTML.length-30, 12);
   var lastLineIP13 = Console.innerHTML.substr(Console.innerHTML.length-33, 12);
-  console.log(IP+' : '+lastLineIP10+' '+lastLineIP11+' '+lastLineIP13);
   if (lastLineIP10 == "Trying&nbsp;" || lastLineIP11 == "Trying&nbsp;" || lastLineIP13 == "Trying&nbsp;")
 	return;
   socket.emit('Commande', 'e');
@@ -337,7 +335,6 @@ function resetDSLAMNextNext() {
 
 function loadTPCISCO(IP) {
 	date = new Date();
-		console.log(IP+" "+date.getTime());
 	switch (IP) {
 		case '10.20.30.22':
 			file = 'BarceloneTPMini.txt';
