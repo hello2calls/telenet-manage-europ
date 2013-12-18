@@ -1,17 +1,17 @@
 body {
-	background:#F7F4E9 repeat-x top center;
+	background:#fff repeat-x top center;
 }
 small {
-	color:#F7F4E9
+	color:#fff
 }
 
 #navigation,a:hover {
 	background:#002C5A;
-	color:#fff
+	color:#000
 }
 
 #navigation input, #content {
-	background:#fff repeat-x 0 -28px
+	background:#000 repeat-x 0 -28px
 }
 
 #content {
@@ -35,15 +35,15 @@ a {
 }
 
 a.button {
-	background:#002C5A;
+	background:#000;
 	color:#fff;
-	border-color:#DDD
+	border-color:#ddd
 }
 
 .opacity {
 	position: absolute;
 	top: 126px;
-	background:#ffffff;
+	background:#fff;
 	opacity:0.8;
 	height:500px;
 	width:1000px;
@@ -67,13 +67,13 @@ a.button {
 }
 
 .console {
-	background:#000000;
+	background:#000;
 	color: #F7F4E9;
 }
 
 #content input {
-	background:#000000;
-	border-color:#000000;
+	background:#000;
+	border-color:#000;
 	color: #aaa;
 }
 
@@ -89,7 +89,7 @@ a.backSpace, a.color{
 	opacity:0.2;
 	background:#434A48;
 	color:#fff;
-	border-color:#DDD
+	border-color:#ddd
 	
 }
 
