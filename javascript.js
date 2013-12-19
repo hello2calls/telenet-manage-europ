@@ -391,6 +391,7 @@ function loadTPCISCONextNext() {
 function display(display) {
   opacity = document.getElementById('opacity');
   img = document.getElementById('img');
+  img.contentDocument.location.reload(true);
   if (display == true) {
     opacity.style.display = "block";
     img.style.display = "block";
