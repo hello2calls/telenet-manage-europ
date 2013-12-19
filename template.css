@@ -1,12 +1,12 @@
 body {
-	background:#fff repeat-x top center;
+	background:#000 repeat-x top center;
 }
 small {
 	color:#fff
 }
 
 #navigation,a:hover {
-	background:#002C5A;
+	background:#000;
 	color:#000
 }
 
@@ -42,10 +42,10 @@ a.button {
 
 .opacity {
 	position: absolute;
-	top: 126px;
+	top: 80px;
 	background:#fff;
 	opacity:0.8;
-	height:500px;
+	height:545px;
 	width:1000px;
 }
 
@@ -59,11 +59,11 @@ a.button {
 }
 
 #head {
-	background:#002C5A
+	background:#000
 }
 
 #navigation a:hover {
-	background:#2B6AAC
+	background:#000
 }
 
 .console {
